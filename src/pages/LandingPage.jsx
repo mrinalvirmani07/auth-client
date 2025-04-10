@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -10,8 +11,8 @@ const LandingPage = () => {
           <li style={navItemStyle}><a href="#features" style={linkStyle}>Features</a></li>
           <li style={navItemStyle}><a href="#community" style={linkStyle}>Community</a></li>
           <li style={navItemStyle}><a href="#pricing" style={linkStyle}>Pricing</a></li>
-          <li style={navItemStyle}><a href="/login" style={buttonLinkStyle}>Log In</a></li>
-          <li style={navItemStyle}><a href="/register" style={primaryButtonLinkStyle}>Sign Up</a></li>
+          <li style={navItemStyle}><Link to="/login" style={buttonLinkStyle}>Log In</Link></li>
+          <li style={navItemStyle}><Link to="/register" style={primaryButtonLinkStyle}>Sign Up</Link></li>
         </ul>
       </nav>
 
@@ -58,18 +59,17 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Community Section */}
-      <section id="community" style={communitySectionStyle}>
+ {/* Community Section */}
+ <section id="community" style={communitySectionStyle}>
         <h2 style={sectionTitleStyle}>Join Our Growing Community</h2>
         <div style={communityContentStyle}>
           <div style={communityImageStyle}>
-            {/* Replace with your actual image */}
             <img src="https://via.placeholder.com/500x350/ffc107/333333?Text=Vibrant%20Community" alt="Vibrant Community" style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)' }} />
           </div>
           <div style={communityDescriptionStyle}>
             <p style={communityParagraphStyle}>Become part of a diverse and inclusive community where you can share your voice and connect with like-minded individuals.</p>
             <p style={communityParagraphStyle}>Explore groups based on your hobbies, interests, and location. Find your tribe and engage in meaningful conversations.</p>
-            <a href="/register" style={communityButtonStyle}>Join the Community</a>
+            <Link to="/register" style={communityButtonStyle}>Join the Community</Link>
           </div>
         </div>
       </section>
@@ -86,7 +86,7 @@ const LandingPage = () => {
               <li style={pricingCardFeatureItemStyle}>Basic Profile</li>
               <li style={pricingCardFeatureItemStyle}>Follow Friends</li>
             </ul>
-            <a href="/register" style={pricingCardButtonStyle}>Get Started</a>
+            <Link to="/register" style={pricingCardButtonStyle}>Get Started</Link>
           </div>
           <div style={pricingCardStyle}>
             <h3 style={pricingCardTitleStyle}>Premium</h3>
@@ -97,7 +97,7 @@ const LandingPage = () => {
               <li style={pricingCardFeatureItemStyle}>Priority Support</li>
               <li style={pricingCardFeatureItemStyle}>Ad-Free Experience</li>
             </ul>
-            <a href="/register" style={pricingCardPrimaryButtonStyle}>Upgrade Now</a>
+            <Link to="/register" style={pricingCardPrimaryButtonStyle}>Upgrade Now</Link>
           </div>
         </div>
       </section>
